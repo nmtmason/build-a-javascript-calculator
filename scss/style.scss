@@ -1,0 +1,108 @@
+@import 'base';
+
+$calculator-width: 300px;
+$calculator-font-family: Courier New, Courier, monospace;
+$calcualtor-padding: 1.5rem;
+$display-font-size: 2rem;
+$long-display-font-size: 1.5rem;
+$display-color: $black;
+$button-font-size: 1.5rem;
+$button-color: $white;
+
+body {
+  margin: 0;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: $spacer;
+}
+
+h1 {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  section {
+    justify-content: center;
+    min-height: 100vh;
+  }
+}
+
+.calculator {
+  width: $calculator-width;
+}
+
+.row {
+  display: flex;
+}
+
+.button, .display, .long-display {
+  font-family: $calculator-font-family;
+  border: 1px solid $white;
+  border-radius: 5px;
+  padding: $calcualtor-padding;
+}
+
+.display, .long-display {
+  width: 100%;
+  text-align: right;
+}
+
+.display {
+  background-color: $gray-lighter;
+  font-size: $display-font-size;
+  color: $display-color;
+}
+
+.long-display {
+  background-color: $gray-lightest;
+  font-size: $long-display-font-size;
+  color: $display-color;
+}
+
+.button {
+  width: 25%;
+  font-size: $button-font-size;
+  text-align: center;
+  color: $button-color;
+}
+
+@mixin button-background-color($color) {
+  background-color: $color;
+
+  &:hover {
+    background-color: darken($color, 15%);
+  }
+}
+
+.clear {
+  @include button-background-color($red);
+}
+
+.store {
+  @include button-background-color($orange);
+}
+
+.recall {
+  @include button-background-color($orange);
+}
+
+.operator {
+  @include button-background-color($teal);
+}
+
+.decimal {
+  @include button-background-color($gray-light);
+}
+
+.equals {
+  width: 50%;
+  @include button-background-color($green);
+}
+
+.digit {
+  @include button-background-color($blue);
+}
