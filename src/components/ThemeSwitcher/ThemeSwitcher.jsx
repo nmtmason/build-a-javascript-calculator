@@ -16,7 +16,6 @@ export class ThemeSwitcher extends Component {
   };
 
   render() {
-    console.log(this.state.selectedTheme, this.props.themes);
     return this.props.children(
       this.props.themes[
         Object.keys(this.props.themes)[this.state.selectedTheme]
