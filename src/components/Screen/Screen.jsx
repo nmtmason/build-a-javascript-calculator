@@ -36,9 +36,9 @@ export const Screen = ({ operations, expression }) => (
       {operations.map(
         (operation, index) =>
           isOperator(operation) ? (
-            <Operator>{operation}</Operator>
+            <Operator key={index}>{operation}</Operator>
           ) : (
-            <Operand>{operation}</Operand>
+            <Operand key={index}>{operation}</Operand>
           )
       )}
     </Operations>
