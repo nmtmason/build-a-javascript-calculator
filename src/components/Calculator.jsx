@@ -38,7 +38,8 @@ const reducer = (state = initialState, action = {}) => {
       return {
         ...state,
         expression,
-        operations
+        operations,
+        evaluated: false
       };
     }
     case 'DECIMAL': {
