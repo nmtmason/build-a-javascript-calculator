@@ -1,4 +1,4 @@
-# [Build a Random Quote Machine](https://learn.freecodecamp.org/front-end-libraries/front-end-libraries-projects/build-a-javascript-calculator)
+# [Build a JavaScript Calculator](https://learn.freecodecamp.org/front-end-libraries/front-end-libraries-projects/build-a-javascript-calculator)
 
 Part of the [freecodecamp](https://www.freecodecamp.com) curriculum.
 
